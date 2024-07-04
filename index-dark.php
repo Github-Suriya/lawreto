@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="zxx">
-    
-<!-- Mirrored from wpthemebooster.com/demo/themeforest/html/lawreto/index-dark.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 02 Jul 2024 06:15:09 GMT -->
 
 <body>
 
-    <div id="header"></div>
+    <?php include 'include/header.php';?>
 
     <div class="main_wrapper">
 
@@ -757,7 +755,7 @@
         </section>
 
         
-        <div id="footer"></div>
+        <?php include 'include/footer.php';?>
         
         <div class="slide_navi">
             <div class="side_footer_social">
@@ -771,28 +769,6 @@
             </div>
         </div>
     </div>
-
-    <!-- Render Header & Footer -->
-
-    <script>
-        async function loadHTML(elementId, url) {
-            try {
-                const response = await fetch(url);
-                if (!response.ok) {
-                    throw new Error(`Network response was not ok: ${response.statusText}`);
-                }
-                const html = await response.text();
-                document.getElementById(elementId).innerHTML = html;
-            } catch (error) {
-                console.error('There was a problem with the fetch operation:', error);
-            }
-        }
-
-        document.addEventListener("DOMContentLoaded", () => {
-            loadHTML('header', 'include/header.html');
-            loadHTML('footer', 'include/footer.html');
-        });
-    </script>
 
 </body>
 </html>
